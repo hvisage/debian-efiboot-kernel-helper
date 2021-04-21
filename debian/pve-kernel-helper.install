@@ -1,5 +1,0 @@
-etc/kernel/postinst.d/*
-etc/kernel/postrm.d/*
-etc/initramfs/post-update.d/pve-efiboot-sync
-usr/sbin/pve-efiboot-tool
-usr/share/pve-kernel-helper/scripts/functions

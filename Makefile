@@ -1,17 +1,16 @@
 include /usr/share/dpkg/pkg-info.mk
 
-export KERNEL_VER=5.11
-export KERNEL_ABI=5.11.12-1-pve
+#export KERNEL_VER=4.19
+#export KERNEL_ABI=4.19.0
 
-GITVERSION:=$(shell git rev-parse HEAD)
 
-KERNEL_DEB=pve-kernel-${KERNEL_VER}_${DEB_VERSION_UPSTREAM_REVISION}_all.deb
-HEADERS_DEB=pve-headers-${KERNEL_VER}_${DEB_VERSION_UPSTREAM_REVISION}_all.deb
-HELPER_DEB=pve-kernel-helper_${DEB_VERSION_UPSTREAM_REVISION}_all.deb
+#KERNEL_DEB=kernel-${KERNEL_VER}_${DEB_VERSION_UPSTREAM_REVISION}_all.deb
+#HEADERS_DEB=headers-${KERNEL_VER}_${DEB_VERSION_UPSTREAM_REVISION}_all.deb
+HELPER_DEB=hev-kernel-helper_${DEB_VERSION_UPSTREAM_REVISION}_all.deb
 
 BUILD_DIR=build
 
-DEBS=${KERNEL_DEB} ${HEADERS_DEB} ${HELPER_DEB}
+DEBS=${HELPER_DEB} 
 
 SUBDIRS = efiboot bin
 
@@ -20,25 +19,21 @@ all: ${SUBDIRS}
 	set -e && for i in ${SUBDIRS}; do ${MAKE} -C $$i; done
 
 .PHONY: deb
-deb: ${DEBS}
+deb: ${HELPER_DEB} 
 
-${HEADERS_DEB}: ${KERNEL_DEB}
-${KERNEL_DEB}: debian
+#${HEADERS_DEB}: ${KERNEL_DEB}
+${HELPER_DEB}: debian
 	rm -rf ${BUILD_DIR}
 	mkdir -p ${BUILD_DIR}/debian
 	rsync -a * ${BUILD_DIR}/
 	cd ${BUILD_DIR}; debian/rules debian/control
-	echo "git clone git://git.proxmox.com/git/pve-kernel-meta.git\\ngit checkout ${GITVERSION}" > ${BUILD_DIR}/debian/SOURCE
+	echo "HeViS.Co mods" > ${BUILD_DIR}/debian/SOURCE
 	cd ${BUILD_DIR}; dpkg-buildpackage -b -uc -us
-	lintian ${DEBS}
+	lintian ${HELPER_DEB}
 
 .PHONY: install
 install: ${SUBDIRS}
 	set -e && for i in ${SUBDIRS}; do ${MAKE} -C $$i $@; done
-
-.PHONY: upload
-upload: ${DEBS}
-	tar cf - ${DEBS}|ssh repoman@repo.proxmox.com -- upload --product pve,pmg --dist buster
 
 .PHONY: clean distclean
 distclean: clean

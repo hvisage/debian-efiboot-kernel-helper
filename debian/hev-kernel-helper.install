@@ -1,0 +1,5 @@
+etc/kernel/postinst.d/*
+etc/kernel/postrm.d/*
+etc/initramfs/post-update.d/hev-efiboot-sync
+usr/sbin/hev-efiboot-tool
+usr/share/hev-kernel-helper/scripts/functions

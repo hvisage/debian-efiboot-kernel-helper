@@ -2,7 +2,7 @@
 
 set -e
 
-. /usr/share/pve-kernel-helper/scripts/functions
+. /usr/share/hev-kernel-helper/scripts/functions
 
 _add_entry_to_list_file() {
 	file="$1"
@@ -199,7 +199,7 @@ clean() {
 
 refresh() {
 	hook=$1
-	hookscripts='pve-auto-removal zz-pve-efiboot'
+	hookscripts='hev-auto-removal zz-hev-efiboot'
 
 	if [ -n "$hook" ]; then
 	    if echo "$hookscripts" | grep -sqE "(^|[[:space:]]+)$hook([[:space:]]+|$)"; then
@@ -293,7 +293,7 @@ help() {
 	echo ""
 	echo "USAGE: $0 init <partition>"
 	echo ""
-	echo "    initialize EFI system partition at <partition> for automatic synchronization of pve-kernels and their associated initrds."
+	echo "    initialize EFI system partition at <partition> for automatic synchronization of kernels and their associated initrds."
 	echo ""
 	echo "USAGE: $0 clean [--dry-run]"
 	echo ""
@@ -305,7 +305,7 @@ help() {
 	echo ""
 	echo "USAGE: $0 kernel <add|remove> <kernel-version>"
 	echo ""
-	echo "    add/remove pve-kernel with ABI <kernel-version> to list of synced kernels, in addition to automatically selected ones."
+	echo "    add/remove kernel with ABI <kernel-version> to list of synced kernels, in addition to automatically selected ones."
 	echo "    NOTE: you need to manually run 'refresh' once you're finished with adding/removing kernels from the list"
 	echo ""
 	echo "USAGE: $0 kernel list"

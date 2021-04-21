@@ -1,12 +1,12 @@
 #! /bin/sh
 set -e
 
-. /usr/share/pve-kernel-helper/scripts/functions
+. /usr/share/hev-kernel-helper/scripts/functions
 
 eval "$(apt-config shell APT_CONF_D Dir::Etc::parts/d)"
 test -n "${APT_CONF_D}" || APT_CONF_D="/etc/apt/apt.conf.d"
 
-config_file="${APT_CONF_D}/76pveconf"
+config_file="${APT_CONF_D}/76hevconf"
 
 generate_apt_config() {
 
@@ -19,14 +19,14 @@ generate_apt_config() {
 	EOF
 	for kernel in $kernels; do
 		escaped_kver="$(echo "$kernel" |  sed -e 's#\([\.\+]\)#\\\1#g')"
-		echo "   \"^pve-kernel-${escaped_kver}$\";"
+		echo "   \"^kernel-${escaped_kver}$\";"
 	done
 	echo '};'
 	if [ "${APT_AUTO_REMOVAL_KERNELS_DEBUG:-false}" = 'true' ]; then
 		cat <<-EOF
 		/* Debug information:
 		# dpkg list:
-		$(dpkg -l | grep -F 'pve-kernel' || true)
+		$(dpkg -l | grep -F 'kernel' || true)
 		# list of installed kernel packages:
 		$kernels
 		*/

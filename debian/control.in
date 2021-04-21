@@ -1,4 +1,4 @@
-Source: pve-kernel-@KERNEL_VER@
+Source: hev-kernel-helper
 Section: admin
 Priority: optional
 Build-Depends: debhelper (>=10~),
@@ -6,27 +6,15 @@ Build-Depends: debhelper (>=10~),
                sed,
 Maintainer: Proxmox Support Team <support@proxmox.com>
 
-Package: pve-headers-@KERNEL_VER@
+Package: kernel-4.19
 Architecture: all
 Section: admin
 Priority: optional
-Depends: pve-headers-@KERNEL_ABI@,
-Description: Latest Proxmox VE Kernel Headers
- This is a metapackage which will install the kernel headers
- for the latest available proxmox kernel from the @KERNEL_VER@
- series.
-
-Package: pve-kernel-@KERNEL_VER@
-Architecture: all
-Section: admin
-Priority: optional
-Depends: pve-firmware,
-         pve-kernel-@KERNEL_ABI@,
 Description: Latest Proxmox VE Kernel Image
  This is a metapackage which will install the latest available
  proxmox kernel from the @KERNEL_VER@ series.
 
-Package: pve-kernel-helper
+Package: hev-kernel-helper
 Architecture: all
 Section: admin
 Priority: optional
@@ -34,9 +22,6 @@ Depends: dosfstools,
          gdisk,
          systemd,
          udev,
-         ${misc:Depends},
-Breaks: proxmox-ve (<< 6.0-2~)
-Replaces: proxmox-ve (<< 6.0-2~)
 Description: Function for various kernel maintenance tasks.
  .
  This package includes kernel-hooks for marking certain kernels as
