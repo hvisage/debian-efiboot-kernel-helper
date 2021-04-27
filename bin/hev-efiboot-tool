@@ -156,7 +156,7 @@ init() {
 
 	echo "Configuring systemd-boot.."
 	echo "timeout 3" > "$esp_mp/$PMX_LOADER_CONF.tmp"
-	echo "default proxmox-*" >> "$esp_mp/$PMX_LOADER_CONF.tmp"
+	echo "default Debian-*" >> "$esp_mp/$PMX_LOADER_CONF.tmp"
 	mv "$esp_mp/$PMX_LOADER_CONF.tmp" "$esp_mp/$PMX_LOADER_CONF"
 	echo "Unmounting '$part'."
 	umount "$part"
