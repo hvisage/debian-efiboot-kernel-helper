@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Copy righted BSD
 set -x
 id -a
 
@@ -11,52 +11,79 @@ deb http://deb.debian.org/debian buster-backports main contrib non-free
 EOF
 
 apt -y update
-apt install --yes debootstrap gdisk dkms dpkg-dev dosfstools  linux-headers-$(uname -r)
+apt install --yes debootstrap gdisk dkms dpkg-dev dosfstools curl jq pciutils wget linux-headers-$(uname -r)
 echo zfs-dkms zfs-dkms/note-incompatible-licenses note  | debconf-set-selections
 apt install --yes -t buster-backports --no-install-recommends zfs-dkms
 
-read "next"
-
 apt install --yes -t buster-backports zfsutils-linux
 modprobe zfs
-
+which curl
 read "next"
 
-DISKP=nvme1n1
-DISKNAME=$( basename $( find /dev/disk/by-id -ls|grep -i ${DISKP}\$ |grep -v -eui|awk '{print $11}'))
-DISK=/dev/disk/by-id/$DISKNAME
-sgdisk --zap-all $DISK
-sgdisk -a1 -n1:24K:+1000K -t1:EF02 $DISK
-sgdisk     -n2:1M:+1024M   -t2:EF00 $DISK
-sgdisk     -n3:0:0        -t3:BF00 $DISK
-partx -s $DISK
-udevadm settle
-mkfs.vfat -F32 -n EFI ${DISK}-part2
+ROOTDISK=`lsblk --json | jq '.blockdevices[]|select (.children[].mountpoint == "/")|.name'` ; echo $ROOTDISK
+OTHERDISKS=`lsblk --output-all --json | jq -r '.blockdevices[]| select (.name != '$ROOTDISK')|(.model+" "+.serial) '| tr ' ' '_'` ; echo $OTHERDISKS
+
+pushd /dev/disk/by-id
+for i in $OTHERDISKS
+do
+	DISKNAMES=`ls nvme-$i `" "$DISKNAMES
+done
+echo $DISKNAMES
+popd
+
+DUMMYSIZE=0
+for D in $DISKNAMES
+do
+	DISK=/dev/disk/by-id/$D
+	sgdisk --zap-all $DISK
+	sgdisk -a1 -n1:24K:+1000K -t1:EF02 $DISK
+	sgdisk     -n2:1M:+1024M   -t2:EF00 $DISK
+	sgdisk     -n3:0:0        -t3:BF00 $DISK
+	partx -s $DISK
+	udevadm settle
+	mkfs.vfat -F32 -n EFI ${DISK}-part2
+	P3S=`lsblk -nbo SIZE ${DISK}-part3`
+	if [ $DUMMYSIZE -lt $P3S ] ; then DUMMYSIZE=$P3S ; fi
+
+	MEMBERS=${D}-part3" "$MEMBERS
+
+done
+
+truncate -s $DUMMYSIZE /tmp/DUMMY
+MEMBERS=$MEMBERS" "/tmp/DUMMY
+lsblk
 
 read "next"
+TYPE=mirror
 
 zpool create -f -o ashift=12 -O acltype=posixacl -O canmount=off -O compression=lz4 \
     -O dnodesize=auto -O normalization=formD -O relatime=on \
     -O xattr=sa -O mountpoint=/ -R /mnt \
-    rpool ${DISKNAME}-part3
+    rpool $TYPE $MEMBERS
+zpool offline rpool /tmp/DUMMY
+read "next"
 
-   zfs create -o canmount=off -o mountpoint=none rpool/ROOT
+zfs create -o canmount=off -o mountpoint=none rpool/ROOT
 zfs create -o canmount=noauto -o mountpoint=/ rpool/ROOT/debian10
 zfs mount rpool/ROOT/debian10
+
+zfs create                                 rpool/boot
 mkdir /mnt/boot/efi
 mount ${DISK}-part2 /mnt/boot/efi
 
-   zfs create                                 rpool/home
+zfs create                                 rpool/home
 zfs create -o mountpoint=/root             rpool/home/root
 chmod 700 /mnt/root
 zfs create -o canmount=off                 rpool/var
 zfs create -o com.sun:auto-snapshot=false    -o mountpoint=/var/lib/docker rpool/docker
 zfs create                                 rpool/var/log
 
+zpool status -v
+zfs list
 read "next"
 
 
-debootstrap  --include=efivar,efibootmgr,dosfstools,gnupg2,ca-certificates,ca-certificates-java,ca-certificates-mono,curl buster /mnt
+debootstrap  --include=efivar,efibootmgr,dosfstools,gnupg2,ca-certificates,ca-certificates-java,ca-certificates-mono,curl,wget buster /mnt
 
 mkdir -p /mnt/etc/apt/sources.list.d/
 cp /etc/apt/sources.list.d/* /mnt/etc/apt/sources.list.d/

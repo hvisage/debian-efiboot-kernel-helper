@@ -1,0 +1,511 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"relo",
+				"daemon_reload"
+			],
+			[
+				"system",
+				"systemd"
+			],
+			[
+				"api_",
+				"api_token_secret"
+			],
+			[
+				"IP",
+				"IPbasenet"
+			],
+			[
+				"IPab",
+				"IPbase"
+			],
+			[
+				"j",
+				"jdkVersion"
+			],
+			[
+				"pg",
+				"pg_cluster_name"
+			],
+			[
+				"c",
+				"commit"
+			],
+			[
+				"li",
+				"list-dedis-vNICs"
+			],
+			[
+				"list-dedis-v",
+				"list-dedis-vMac-vAddr"
+			],
+			[
+				"list-ip",
+				"list-ips-reverse-info"
+			],
+			[
+				"method",
+				"METHOD"
+			],
+			[
+				"ansible",
+				"ansible_host"
+			],
+			[
+				"vhost",
+				"vhost_port"
+			],
+			[
+				"supervisr",
+				"supervisord"
+			],
+			[
+				"apa",
+				"apache2_module"
+			],
+			[
+				"mod",
+				"MODELDIR"
+			],
+			[
+				"delega",
+				"delegate_to"
+			],
+			[
+				"netwo",
+				"network_ether_interfaces"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "hev-kernel.sublime-project",
+			"settings":
+			{
+				"buffer_size": 705,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/hvisage/Work/hev-kernel-meta/README.md",
+			"settings":
+			{
+				"buffer_size": 463,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/hvisage/Work/hev-kernel-meta/Makefile",
+			"settings":
+			{
+				"buffer_size": 1009,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"json",
+				"Pretty JSON: Format JSON Lines"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Pro",
+				"Project Manager: Edit Project"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 207.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/hvisage/Work/hev-kernel-meta",
+		"/Users/hvisage/Work/hev-kernel-meta/bin",
+		"/Users/hvisage/Work/hev-kernel-meta/debian",
+		"/Users/hvisage/Work/hev-kernel-meta/efiboot"
+	],
+	"file_history":
+	[
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/all/proxmox_api_vars.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/roles/caddy-mx/tasks/main.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/all/Mendix.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/scripts/bootstrap.sh",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/chrony_fixes.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/hosts.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/bootstrap_instances.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/debian-upgrade.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/all/debops_vars.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/all/apt_install.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/mendix-prep.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/mendix-empty-restore-db.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/new-mendix-empty-restore-db.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/resize-logdisk.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/create_vms.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ad-infra.sublime-project",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/roles/caddy-mx/tasks/debian.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/mendix/mendix.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/orig-hosts.old",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/roles/caddy-mx/templates/caddy.json.jinga2",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/mendix-caddy.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/mendix/apt_install.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/testing-uri.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/mendix_build.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/LeadManagement/variables.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/mendix_build_deploy.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/proxmox/VMs.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/deploy.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/all/various.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/roles/nginx-mx/tasks/main.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/mendix-model-deploy.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/playbooks/mendix-build.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/scripts/mx_build.sh",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/AfricaDirect/passwords.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/ADEduBondv2/variables.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/bootstrap.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/postgresql/postgresql.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/AfricaDirect/variables.yaml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/group_vars/all/agileworks_users.yml",
+		"/Users/hvisage/Work/AGW/ad-infra/ansible/inventory/hosts",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-t4a-to-loadbalancer/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-t4a-to-loadbalancer/handlers/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-to-loadbalancer/handlers/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-to-loadbalancer/templates/vhost-single.conf.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-to-loadbalancer/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision/t4a-2021.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-to-loadbalancer/templates/vhost-single.conf.j2-nginx",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/django-site-vars.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-to-loadbalancer/templates/vhost-single.conf.j2-problems",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-to-loadbalancer/tasks/mounts.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/deploy/django-promo.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-to-loadbalancer/tasks/cert-handling.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/tasks/deploy.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/group_vars/all.yaml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/scripts/bootstrap.sh",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/ovh-stage.ini",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/vars/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/nginx/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/t4a-provision/handlers/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/handlers/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/templates/vhost.conf.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/group_vars/djangos-2021.yaml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/group_vars/t4a-2021.yaml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/uwsgi/handlers/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/uwsgi/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/templates/uwsgi.ini.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/t4a-provision/templates/t4a_uwsgi.ini.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/uwsgi/files/uwsgi.service",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/t4a-provision/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/common/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/common/tasks/network.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/common/vars/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/tasks/filesystems.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision-2021.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-t4a-to-loadbalancer/templates/vhost-single.conf.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/t4a-django-archive-vars.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-t4a-to-loadbalancer/tasks/mounts.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/debug-vars.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/maintenance/dot-files.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/group_vars/postgresqlservers.yaml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision/t4a-db-useraccounts.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/t4a.sublime-project",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/t4a-django-2021-vars.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/deploy-t4a-to-loadbalancer/tasks/cert-handling.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/postgresql/tasks/init-replication.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision/load-balancer.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/BOOTSTRAP_VMs.md",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/Archive/archive-server.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/once_off/disksetup.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/postgresql/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/postgresql/templates/recovery.conf.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/postgresql/files/postgresql.conf.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision/celery-2021.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/t4a-provision/templates/settings.py.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/scripts/archive-run.sh",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/deploy/django-promo-all.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/t4a-provision/templates/dump_variables.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/celery-2021/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/group_vars/t4a-2021",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/common/templates/resolv.conf.j2",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/apt/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/postgresql/handlers/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/group_vars/all",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/t4a-provision/tasks/filesystems.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/t4a-django-vars.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/prepare.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/common/tasks/packages.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/security-init/tasks/packages.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/ansible.cfg",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/disksetup/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/maintenance/update-packages.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/VERSION.txt",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/scripts/dhcp-2018.xml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision/to-remove-t4a-db-useraccounts.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/group_vars/djangos-2021",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/inventories/development.ini",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/apt/files/sources.list-Debian-buster",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/uwsgi/files/uwsgi.conf",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/sysadmin/tasks/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision/users.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/security-init/files/sudoers",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/django-site/defaults/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/roles/postgresql/defaults/main.yml",
+		"/Users/hvisage/Work/T4A/t4a-infrastructure/playbooks/provision.yml",
+		"/Users/hvisage/Work/AGW/mw-mx/ansible/playbooks/mendix-model-deploy.yml",
+		"/Users/hvisage/Work/AGW/mw-mx/rsync-stuff.sh",
+		"/Users/hvisage/Work/AGW/mw-mx/mwmx.sublime-project"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "hev-kernel.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/hvisage/Work/hev-kernel-meta/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								463
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/hvisage/Work/hev-kernel-meta/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "hev-kernel.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 180.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 341.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 4
+	}
+}

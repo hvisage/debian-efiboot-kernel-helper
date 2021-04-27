@@ -1,0 +1,49 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/hvisage/Work/hev-kernel-meta"
+		}
+	],
+	"settings":
+	{
+		"rsync_ssh":
+		{
+			"excludes":
+			[
+				".git*",
+				"_build",
+				"blib",
+				"Build"
+			],
+			"options":
+			[
+				// "--dry-run",
+				"--delete"
+			],
+			"remotes":
+			{
+				"/Users/hvisage/Work/hev-kernel-meta":
+				[
+					{
+						"enabled": 1,
+						"excludes":
+						[
+						],
+						"options":
+						[
+						],
+						"remote_host": "aptcacher-tros",
+						"remote_path": "debs/hev-kernel-meta",
+						"remote_port": 22,
+						"remote_post_command": "",
+						"remote_pre_command": "",
+						"remote_user": "root"
+					}
+				]
+			},
+			"show_osx_notifications": true,
+			"sync_on_save": true
+		}
+	}
+}

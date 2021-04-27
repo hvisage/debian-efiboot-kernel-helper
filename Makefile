@@ -10,7 +10,7 @@ HELPER_DEB=hev-kernel-helper_${DEB_VERSION_UPSTREAM_REVISION}_all.deb
 
 BUILD_DIR=build
 
-DEBS=${HELPER_DEB} 
+DEBS=${HELPER_DEB}
 
 SUBDIRS = efiboot bin
 
@@ -19,7 +19,7 @@ all: ${SUBDIRS}
 	set -e && for i in ${SUBDIRS}; do ${MAKE} -C $$i; done
 
 .PHONY: deb
-deb: ${HELPER_DEB} 
+deb: ${HELPER_DEB}
 
 #${HEADERS_DEB}: ${KERNEL_DEB}
 ${HELPER_DEB}: debian
@@ -30,6 +30,8 @@ ${HELPER_DEB}: debian
 	echo "HeViS.Co mods" > ${BUILD_DIR}/debian/SOURCE
 	cd ${BUILD_DIR}; dpkg-buildpackage -b -uc -us
 	lintian ${HELPER_DEB}
+	cp *deb /files/debs/
+	cp zfs-root/zfs-root.sh /files/scripts/
 
 .PHONY: install
 install: ${SUBDIRS}
