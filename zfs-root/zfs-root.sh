@@ -1,7 +1,26 @@
 #!/bin/bash
 #Copyrighted BSD (Or whatever but updates and assistance to get it into Debian would be great ;)
 #
-# wget https://apt.tros.ovh/scripts/zfs-root.sh
+# sudo -i
+# rm zfs-root.sh ; wget https://apt.tros.ovh/scripts/zfs-root.sh ; chmod +x zfs-root.sh ; ./zfs-root.sh
+#
+# TEsted on a installation of an OVH Infra-3 2x NVMe disks
+#
+# Assumptions/pre-requisites before running:
+# 00) UEFI boot
+# 0) su/sudo'd to root
+# 1) Debian 10 installled on a single disk
+# 2) other disks available
+# 3) *this* script as is will create a MIRROR type with a dummy
+# 4) will force a reboot, pray and have the console avilable :)
+# 5) once rebooted, you'll have to
+# - sgdisk /dev/disk/ZFS -R /dev/disk/oldBoot
+# - sgdisk -G /dev/disk/oldBoot
+# - zpool replace rpool /tmp/DUMMY /dev/disk/oldBoot-part3
+# - /usr/sbin/hev-efiboot-tool format /dev/disk/oldBoot-part2
+# - /usr/sbin/hev-efiboot-tool init /dev/disk/oldBoot-part2
+# - /usr/sbin/hev-efiboot-tool refresh
+
 set +x
 id -a
 WAIT=echo
